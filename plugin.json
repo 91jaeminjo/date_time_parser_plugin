@@ -1,0 +1,7 @@
+
+{
+    "name": "Date Time Parser Plugin",
+    "url": "https://github.com/91jaeminjo/date_time_parser_plugin",
+    "description": "Customization of https://github.com/PostHog/timestamp-parser-plugin",
+    "main": "index.js"
+}
