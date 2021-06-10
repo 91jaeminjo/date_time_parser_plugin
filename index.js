@@ -7,13 +7,13 @@ function processEvent(event) {
   event.properties['timezoneCheck'] = clientTimeZone;
   
   /// en-GB formats date: day/month/year
-  event.properties['day_of_the_week'] = date.toLocaleDateString('en-GB', { weekday: 'long', timezone: clientTimeZone });
+  event.properties['day_of_the_week'] = date.toLocaleDateString('en-GB', { weekday: 'long', timeZone: clientTimeZone });
   const dayMonthYear = date.toLocaleDateString('en-GB').split('/');
   event.properties['day'] = Number(dayMonthYear[0]);
   event.properties['month'] = Number(dayMonthYear[1]);
   event.properties['year'] = Number(dayMonthYear[2]);
 
-  const timeCheck = date.toLocaleTimeString('en-GB', {timezone: clientTimeZone});
+  const timeCheck = date.toLocaleTimeString('en-GB', {timeZone: clientTimeZone});
   event.properties['timeCheck']= timeCheck;
   
   event.properties['time_of_day'] = timeCheck.split(':')[0];
