@@ -1,3 +1,4 @@
+/// This code modified from: https://github.com/PostHog/timestamp-parser-plugin
 
 function processEvent(event) {
   const date = new Date(event.timestamp || event.data?.timestamp || event.properties?.timestamp || event.now || event.sent_at || event.properties?.['$time']);  
