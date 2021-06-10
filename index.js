@@ -5,7 +5,7 @@ function processEvent(event) {
   const clientTimeZone = event.properties['timezone'];
   event.properties['timezoneCheck'] = clientTimeZone;
   /// en-GB formats date: day/month/year
-  event.properties['day_of_the_week'] = date.toLocaleDateString('en-GB', { weekday: 'long', timezone: 'America/Chicago' });
+  event.properties['day_of_the_week'] = date.toLocaleDateString('en-GB', { weekday: 'long' });
   const dayMonthYear = date.toLocaleDateString('en-GB').split('/');
   event.properties['day'] = Number(dayMonthYear[0]);
   event.properties['month'] = Number(dayMonthYear[1]);
