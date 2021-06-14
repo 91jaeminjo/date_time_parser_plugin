@@ -8,7 +8,7 @@ function processEvent(event) {
   const timeOfDay = date.toLocaleTimeString('en-GB', {timeZone: clientTimeZone}).split(':');
   
   /// en-GB formats date: day/month/year
-  event.properties['day_month_year'] = date.toLocaleDateString('en-GB');
+  event.properties['month_day_year'] = date.toLocaleDateString('en-US');
   event.properties['day_of_the_week'] = dayOfWeek;
   event.properties['day'] = Number(dayMonthYear[0]);
   event.properties['month'] = Number(dayMonthYear[1]);
