@@ -2,7 +2,7 @@
 
 function processEvent(event) {
   const date = new Date(event.timestamp || event.data?.timestamp || event.properties?.timestamp || event.now || event.sent_at || event.properties?.['$time']);
-  const clientTimeZone = event.properties['\$timezone'];
+  const clientTimeZone = (event.properties['\$timezone'] || event.properties.timezone);
   const dayOfWeek =  date.toLocaleDateString('en-GB', { weekday: 'long', timeZone: clientTimeZone });
   const dayMonthYear = date.toLocaleDateString('en-GB').split('/');
   const timeOfDay = date.toLocaleTimeString('en-GB', {timeZone: clientTimeZone}).split(':');
